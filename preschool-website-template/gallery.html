@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="utf-8">
+    <title>website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <a href="index.html" class="navbar-brand">
+           <h1 class="m-0 text-primary"><img src="img/logo.jpg" style="width: 70px;"/> पीएम श्री जि.प.मा.शा.खोकरमोहा</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="index.html" class="nav-item nav-link">मुख्यपृष्ठ</a>
+                <a href="about.html" class="nav-item nav-link">आमच्याविषयी</a>
+                <a href="gallery.html" class="nav-item nav-link active">गॅलरी</a>
+                <a href="contact.html" class="nav-item nav-link">संपर्क</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="container-xxl py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+            <h1 class="display-2 text-white animated slideInDown mb-4">गॅलरी (व्हिडिओसह)</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">मुख्यपृष्ठ</a></li>
+                    <li class="breadcrumb-item"><a href="#">पाने</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">गॅलरी</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Category Preview Images -->
+    <div class="container text-center mb-4">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div onclick="filterGallery('school')" style="cursor:pointer">
+                    <img src="img/img4.jpeg" class="img-fluid rounded shadow" alt="शाळा">
+                    <h5 class="mt-2">शाळा</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('lab')" style="cursor:pointer">
+                    <img src="img/ (5).jpeg" class="img-fluid rounded shadow" alt="प्रयोगशाळा">
+                    <h5 class="mt-2">प्रयोगशाळा</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('playground')" style="cursor:pointer">
+                    <img src="img/img11.jpeg" class="img-fluid rounded shadow" alt="खेळाचे मैदान">
+                    <h5 class="mt-2">खेळाचे मैदान</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('gathering')" style="cursor:pointer">
+                    <img src="img/img5.jpeg" class="img-fluid rounded shadow" alt="मेळावे">
+                    <h5 class="mt-2">मेळावे</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('activity')" style="cursor:pointer">
+                    <img src="img/img1.jpeg" class="img-fluid rounded shadow" alt="क्रियाकलाप">
+                    <h5 class="mt-2">क्रियाकलाप</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('culture')" style="cursor:pointer">
+                    <img src="img/img9.jpeg" class="img-fluid rounded shadow" alt="सांस्कृतिक">
+                    <h5 class="mt-2">सांस्कृतिक</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div onclick="filterGallery('achievments')" style="cursor:pointer">
+                    <img src="img/ (2).jpeg" class="img-fluid rounded shadow" alt="यश">
+                    <h5 class="mt-2">यश</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4" id="galleryGrid"></div>
+        </div>
+    </div>
+
+    <!-- Video -->
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">आमच्या शाळेचा व्हिडिओ</h2>
+            <p>कॅमेऱ्यात कैद केलेल्या काही खास क्षणांचा आनंद घ्या.</p>
+        </div>
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3k5MtKNRhL4?start=8" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">संपर्क</h3>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>पीएम श्री जिल्हा परिषद माध्यमिक शाळा, खोकरमोहरा...</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 9420405790</p>
+                    <p><i class="fa fa-envelope me-3"></i>zphskhokarmoha@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        const galleryItems = [
+            { file: 'img1.jpeg', category: 'activity' },
+            { file: 'img2.jpeg', category: 'activity' },
+            { file: 'img3.jpeg', category: 'gathering' },
+            { file: 'img4.jpeg', category: 'school' },
+            { file: 'img5.jpeg', category: 'gathering' },
+            { file: 'img6.jpeg', category: 'activity' },
+            { file: 'img7.jpeg', category: 'gathering' },
+            { file: 'img8.jpeg', category: 'school' },
+            { file: 'img9.jpeg', category: 'culture' },
+            { file: 'img10.jpeg', category: 'gathering' },
+            { file: 'img11.jpeg', category: 'playground' },
+            { file: 'img12.jpeg', category: 'gathering' },
+            { file: 'img13.jpeg', category: 'school' },
+            { file: 'img14.jpeg', category: 'lab' },
+            { file: 's-img.jpeg', category: 'school'},
+            { file: 's-img2.jpeg', category: 'school'},
+            { file: '(4).jpeg', category: 'activity'},
+            { file: 'img15.jpeg', category: 'lab' },
+            { file: '(5).jpeg', category: 'lab' },
+            { file: '(2).jpeg', category: 'achievments' },
+            { file: '(7).jpeg', category: 'activity'},
+            { file: '(8).jpeg', category: 'activity'},
+            { file: '(9).jpeg', category: 'activity'},
+            { file: '(3).jpeg', category: 'playground'}
+        ];
+
+        function renderGallery(filter) {
+            const galleryGrid = document.getElementById("galleryGrid");
+            galleryGrid.innerHTML = '';
+            galleryItems
+                .filter(item => filter === 'all' || item.category === filter)
+                .forEach(item => {
+                    const col = document.createElement("div");
+                    col.className = "col-lg-4 col-md-6 wow fadeInUp";
+                    col.innerHTML = `
+                        <a href="img/${item.file}" data-lightbox="school-gallery">
+                            <img src="img/${item.file}" class="img-fluid rounded" alt="">
+                        </a>
+                    `;
+                    galleryGrid.appendChild(col);
+                });
+        }
+
+        function filterGallery(category) {
+            renderGallery(category);
+            window.scrollTo({ 
+                top: document.getElementById("galleryGrid").offsetTop - 50, 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Removed initial render so gallery is empty until a category is clicked
+    </script>
+</body>
+</html>
